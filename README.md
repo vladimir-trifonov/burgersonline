@@ -1,25 +1,22 @@
-orgchartapp
-===========
-
 Burgers Online - MEAN Stack App
------------------------------------------
+-------------------------------
 
-Burger online ordering platform - Requirements
-----------------------------------------------
+Requirements
+------------
 
 The customer will need to:
 
-● Enter contact and delivery details
-● Choose the ingredients for the burgers
-● See the final price
-● Place an order
+- Enter contact and delivery details
+- Choose the ingredients for the burgers
+- See the final price
+- Place an order
 
 The manager/cook needs to:
 
-● See the orders
-● Set/change the status of orders (ordered, in progress, on the road, delivered)
-● Filter by order status.
-● Do all the above only when logged in
+- See the orders
+- Set/change the status of orders (ordered, in progress, on the road, delivered)
+- Filter by order status.
+- Do all the above only when logged in
 
 Instalation notes
 -----------------
