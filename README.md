@@ -8,16 +8,18 @@ Burger online ordering platform - Requirements
 ----------------------------------------------
 
 The customer will need to:
+
 ● Enter contact and delivery details
 ● Choose the ingredients for the burgers
 ● See the final price
 ● Place an order
+
 The manager/cook needs to:
+
 ● See the orders
 ● Set/change the status of orders (ordered, in progress, on the road, delivered)
 ● Filter by order status.
 ● Do all the above only when logged in
-
 
 Instalation notes
 -----------------
