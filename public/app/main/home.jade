@@ -1,0 +1,8 @@
+div(ng-controller="LoginController")
+    a.auth-link(ng-href="#/login", ng-hide="identity.isAuthenticated()")
+        | Login
+    a.auth-link(ng-href="#/operator/orders", ng-show="identity.isAuthenticated()")
+        | View Orders
+a.main-content.fixed-content-center(ng-href='#/order')
+
+

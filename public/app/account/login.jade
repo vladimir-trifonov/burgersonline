@@ -1,0 +1,15 @@
+div.login-content.background
+a.func-link(href="#/order")
+    | Make Order
+div.fixed-content-center.login-form-wrapper(ng-controller="LoginController")
+    form(ng-hide="identity.isAuthenticated()", class="white-orange", method="post")
+        h1
+            | Login
+            span
+                | Enter user info
+        .form-group
+            input.form-control(type="text", placeholder="Username", ng-model="user.username")
+            input.form-control(type="password", placeholder="Password", ng-model="user.password")
+        button.button(ng-click="login(user)") Login
+a.auth-link(href="#" ng-click="logout()", ng-show="identity.isAuthenticated()")
+    | Logout

@@ -1,0 +1,28 @@
+<form ng-controller="OrderController as orderCtr" class="white-orange" method="post" name="orderForm">
+    <h1>burgers Online<span>Make an order.</span></h1>
+    <div class="form-group">
+        <label for="inputName">Name</label>
+        <input type="text" class="form-control" id="inputName" required ng-model="model.name">
+    </div>
+    <div class="form-group">
+        <label for="inputPhone">Phone</label>
+        <input type="text" class="form-control" id="inputPhone" required ng-model="model.phone">
+    </div>
+    <div class="form-group">
+        <label for="inputAddress">Address</label>
+        <textarea class="form-control" id="inputAddress" required ng-model="model.address"></textarea>
+    </div>
+    <label>Ingredients</label>
+    <ul class="list-choice clearfix">
+        <li ng-repeat="ingredient in orderCtr.ingredients" ng-bind="ingredient.name" class="list-choice-item" data-val="{{ingredient}}"></li>
+    </ul>
+    <hr/>
+    <h2>Order</h2>
+    <label>Ingredients</label>
+    <ul class="list-selected"></ul>
+    <div class="form-group">
+        <label for="inputPrice">Price</label>
+        <input type="text" class="form-control" id="inputPrice" placeholder="price" ng-model="model.price" readonly>
+    </div>
+    <button type="submit" class="button">Order</button>
+</form>

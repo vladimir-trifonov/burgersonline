@@ -1,0 +1,42 @@
+div.orders-list-content.background
+a.func-link(href="#/order")
+    | Make Order
+div(ng-controller="LoginController")
+    a.auth-link(href="#" ng-click="logout()", ng-show="identity.isAuthenticated()")
+        | Logout
+.container.orders-list-wrapper(ng-controller="OrdersListController")
+    .white-orange
+        .row
+            .col-md-2.col-sm-2.col-xs-2 Filter by status:
+            .col-md-3.col-sm-3.col-xs-3
+                select.form-control(ng-model="filter")
+                    option(value="") All
+                    option(value="ordered") Ordered
+                    option(value="inprogress") In Progress
+                    option(value="ontheroad") On The Road
+                    option(value="delivered") Delivered
+            button.button.pull-right(ng-click="update(orders)")
+                | Update
+        br
+        table.table
+            tr
+                th Name
+                th Phone
+                th Address
+                th Ingredients
+                th Price
+                th Status
+                th Ordered At
+            tr(ng-repeat="order in orders | filter:{ status: filter} | orderBy:'orderedAt':false")
+                td {{ order.name }}
+                td {{ order.phone }}
+                td {{ order.address }}
+                td {{ order.ingredients.join(', ') }}
+                td.text-right {{ order.price }}
+                td
+                    select.form-control(ng-model="order.status")
+                        option(value="ordered") Ordered
+                        option(value="inprogress") In Progress
+                        option(value="ontheroad") On The Road
+                        option(value="delivered") Delivered
+                td {{ order.orderedAt | date:'short' }}
